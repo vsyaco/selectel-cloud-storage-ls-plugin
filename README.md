@@ -20,6 +20,6 @@ Plugin based on Amazon S3 plugin by extravert [2] and contains selectel storage 
 
 ## Installation and configuration
 
-Download plugin (see ZIP button above list of files and directories on GitHub), extract folder and move it to LiveStreet's "plugins" folder. 
+Download plugin (see ZIP button above list of files and directories on GitHub), extract folder, name it "selectelstorage" and move it to LiveStreet's "plugins" folder. 
 
 Plugin configuration can be found and edited in config/config.php

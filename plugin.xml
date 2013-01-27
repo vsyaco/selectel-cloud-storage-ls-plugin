@@ -7,9 +7,9 @@
 		<lang name="default">Dmitry Lakhno</lang>
 	</author>
 	<homepage>http://kexek.me</homepage>
-	<version>0.2.1</version>
+	<version>0.2.2 (unstable)</version>
 	<requires>
-		<livestreet>0.4.2</livestreet>
+		<livestreet>1.*</livestreet>
 		<plugins>
 		</plugins>
 	</requires>

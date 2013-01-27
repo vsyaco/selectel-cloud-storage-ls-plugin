@@ -28,8 +28,10 @@ class PluginSelectelStorage extends Plugin {
 	protected $aInherits=array(	  
 	   'module'  => array(	
 		  'ModuleTopic' => 'PluginSelectelstorage_ModuleTopic', 
-		  'ModuleImage' => 'PluginSelectelstorage_ModuleImage' 
+		  'ModuleImage' => 'PluginSelectelstorage_ModuleImage',
+          'PluginLsgallery_ModuleImage'=>'_ModuleGalleryimage'
 		),
+       'entity'  =>array('PluginLsgallery_ModuleImage_EntityImage'=>'_ModuleGalleryimage_EntityImage'),
 	);
 }
 
