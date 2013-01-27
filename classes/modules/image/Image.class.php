@@ -22,7 +22,7 @@ class PluginSelectelstorage_ModuleImage extends PluginSelectelstorage_Inherit_Mo
 
             try {
 
-				$bucket = $sS->getContainer(Config::Get('plugin.selectelstorage.bucket')));
+				$bucket = $sS->getContainer(Config::Get('plugin.selectelstorage.bucket'));
 				$sName = strtolower(array_pop(explode(trim(Config::Get('path.uploads.root')).'/', $sFilePath)));
 
 				if ($bucket->putFile($sFilePath, $sName)) {
