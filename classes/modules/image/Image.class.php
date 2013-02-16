@@ -22,10 +22,13 @@ class PluginSelectelstorage_ModuleImage extends PluginSelectelstorage_Inherit_Mo
 
             try {
 
-				$bucket = $sS->getContainer(Config::Get('plugin.selectelstorage.bucket'));
-				$sName = strtolower(array_pop(explode(trim(Config::Get('path.uploads.root')).'/', $sFilePath)));
+                $bucket = $sS->getContainer(Config::Get('plugin.selectelstorage.bucket'));
 
-				if ($bucket->putFile($sFilePath, $sName)) {
+                $sName = explode(trim(Config::Get('path.uploads.root')).'/', $sFilePath);
+                $sName = array_pop($sName);
+                $sName = strtolower($sName);
+
+                if ($bucket->putFile($sFilePath, $sName)) {
                     @unlink($sFilePath);
                     return 'http://' . Config::Get('plugin.selectelstorage.domain') . '/'. $sName;
                 }
@@ -33,7 +36,7 @@ class PluginSelectelstorage_ModuleImage extends PluginSelectelstorage_Inherit_Mo
                     error_log('Something wrong while uploading file to selectel storage');
                     return false;
                 }
-			}
+            }
             catch(Exception $e) {
                 error_log("Something wrong while uploading file to selectel storage. Error: ".$e->getMessage());
                 return false;

@@ -31,7 +31,7 @@ class PluginSelectelStorage extends Plugin {
 		  'ModuleImage' => 'PluginSelectelstorage_ModuleImage',
           'PluginLsgallery_ModuleImage'=>'_ModuleGalleryimage'
 		),
-       'entity'  =>array('PluginLsgallery_ModuleImage_EntityImage'=>'_ModuleGalleryimage_EntityImage'),
+       'entity'  =>array('PluginLsgallery_ModuleImage_EntityImage'=>'_ModuleGalleryimage_EntityImage')
 	);
 }
 
